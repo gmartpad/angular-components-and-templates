@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { ItemData } from './dashboard-item.model';
 
 
@@ -11,5 +11,5 @@ import { ItemData } from './dashboard-item.model';
   styleUrl: './dashboard-item.component.css'
 })
 export class DashboardItemComponent {
-  @Input({ required: true }) itemData!: ItemData
+  itemData = input.required<ItemData>()
 }

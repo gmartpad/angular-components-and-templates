@@ -8,6 +8,6 @@ import { Component, input } from '@angular/core';
   styleUrl: './button.component.css'
 })
 export class ButtonComponent {
-  title = input.required<string>()
-  buttonSymbol = input.required<string>()
+  // title = input.required<string>()
+  // buttonSymbol = input.required<string>()
 }

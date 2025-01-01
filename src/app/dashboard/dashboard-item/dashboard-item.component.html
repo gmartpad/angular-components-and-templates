@@ -1,9 +1,7 @@
-<div class="dashboard-item">
-    <article>
-        <header>
-            <img [src]="itemData().imgSrc" [alt]="itemData().imgAlt" />
-            <h2>{{itemData().headerTitle}}</h2>
-        </header>
-        <ng-content/>
-    </article>
-</div>
+<article>
+    <header>
+        <img [src]="itemData().imgSrc" [alt]="itemData().imgAlt" />
+        <h2>{{itemData().headerTitle}}</h2>
+    </header>
+    <ng-content/>
+</article>

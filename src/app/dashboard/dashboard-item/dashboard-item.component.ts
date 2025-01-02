@@ -1,8 +1,6 @@
 import { Component, input, Input } from '@angular/core';
 import { ItemData } from './dashboard-item.model';
 
-
-
 @Component({
   selector: 'app-dashboard-item',
   standalone: true,

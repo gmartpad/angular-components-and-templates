@@ -10,9 +10,10 @@ import { Ticket } from '../tickets.model';
 })
 export class TicketComponent {
   ticket = input.required<Ticket>()
-  isTicketOpen = signal<boolean>(false)
+  areTicketDetailsVisible = signal<boolean>(false)
 
-  toggleIsTicketOpen() {
-    this.isTicketOpen.set(!this.isTicketOpen())
+  toggleDetails() {
+    // this.areTicketDetailsVisible.set(!this.areTicketDetailsVisible())
+    this.areTicketDetailsVisible.update((prevValue) => !prevValue)
   }
 }

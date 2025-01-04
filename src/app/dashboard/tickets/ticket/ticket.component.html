@@ -7,10 +7,10 @@
             }"
         >
         </div>
-        <button (click)="toggleIsTicketOpen()">
+        <button (click)="toggleDetails()">
             <span class="text">{{ ticket().title }}</span>
             <span>
-            @if (!isTicketOpen()) {
+            @if (!areTicketDetailsVisible()) {
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -43,7 +43,7 @@
         </button>
     </h3>
   
-    @if (isTicketOpen()) {
+    @if (areTicketDetailsVisible()) {
         <p>{{ticket().request}}</p>
   
         @if (ticket().status === 'open') {

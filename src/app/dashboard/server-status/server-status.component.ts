@@ -12,8 +12,13 @@ export class ServerStatusComponent implements OnInit, AfterViewInit, OnDestroy {
   private destroyRef = inject(DestroyRef)
 
   constructor() {
-    effect(() => {
+    effect((onCleanup) => {
       console.log(this.currentStatus())
+
+      onCleanup(() => {
+        // clean up anything that you set up in
+        // the body of the effect callback
+      })
     })
   }
 
